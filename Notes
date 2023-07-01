@@ -1,0 +1,26 @@
+-----------------------------------
+-------------- ROUTES -------------
+-----------------------------------
+- Les routes sont liés aux noms des dossiers
+- Quand on met dans un dossier parent un sous dossier où son nom est entre crochet [id], cela permet d'accepter tous les noms de routes pour acceder a ce sous dossier
+
+
+-----------------------------------
+-------------- STRUCTURE -------------
+-----------------------------------
+- On peut grouper des dossiers en les mettant dans un dossier parents mais qui ne comptera pas dans les appels de route 
+    ex: login + register on les mets dans un dossier parent (auth), cela ne sert qu'a mieux organiser son architecture
+
+
+-----------------------------------
+-------------- LAYOUT -------------
+-----------------------------------
+- Le layout permet d'enrober tous ce qu'il y dans son répertoire du meme niveau et englobe aussi les niveaux inferieurs
+
+-----------------------------------
+-------------- SPINNER/LOADING/ERROR ETC.... -------------
+-----------------------------------
+- Nextjs offre la possibilité de pouvoir mettre des fichiers facilement pour afficher une page ou un composant en fonction du rôle qui s'associe aux nom du fichiers
+    - loading
+    - errors
+    ...
