@@ -17,6 +17,7 @@
 -----------------------------------
 - Le layout permet d'enrober tous ce qu'il y dans son répertoire du meme niveau et englobe aussi les niveaux inferieurs
 
+
 -----------------------------------
 -------------- SPINNER/LOADING/ERROR ETC.... -------------
 -----------------------------------
@@ -24,3 +25,27 @@
     - loading
     - errors
     ...
+
+
+-----------------------------------
+-------------- RENDU DES COMPOSANTS/PAGES -------------
+-----------------------------------
+- Quand on crée un composant on peut soit le mettre coté serveur soit coté client, si un composant possède une intéractivité avec l'utilisateur avec un évenement comme onClick alors il faut le mettre coté client avec en tête du fichier "use client"
+- Les liens ne sont pas considérés comme des intéractivités, intéractivités = events
+- Le rendu coté serveur est important pour un meilleur référencement
+- Les pages peuvent donc etre un assemblage de composant coté serveur (référencement et pas d'intéraction) et de composant coté client (pas de référencement et intéraction user)
+
+
+-----------------------------------
+-------------- IMAGES -------------
+-----------------------------------
+- On peut mettre une image depuis une src"le chemin" ou importer comme un composant, mais il vaut mieux utiliser le chemin car avec le module Image de next/image on pourra optimiser automatiquement l'image à condition de passer une string dans src="chemin"
+    optimisation:
+        .redimenssioner
+        .Conversion en WebP pour une meilleur compression
+        .Lazy Loading: chargement de l'image qu'une fois qu'elle entre dans la viewport de l'utilisateur
+        .Priorisation du chargement des images dans la viewport utilisateur
+- Dans le cas de l'optimisation, il est obligatoire d'indiquer les width et height ou de mettre fill={true} (qui permet de remplir son élément parent) afin de:
+    .Prévention du "Layout Shift": fournit les dimensiosn afin que le navigateur réserve l'espace de l'image avant qu'elle ne sois chargée, afin d'eviter que l'image aparraisse et que les éléments de la page bougent.
+    Dans ce cas précis il est intéressant d'utiliser la propriété layout="responsive" afin de l'adapter à son conteneur ou l'écran si absence de conteneur, et si on veut gérer la taille du responsive via le CSS alors on peut mettre l'image dans un conteneur et gérer les dimensions de ce conteneur afin de gérer l'image indirectement
+- Pour utiliser des images externes en mettant l'url externe dans src, il faut préciser le domaine du site externe dans le fichier next.config.js (voir fichier)

@@ -23,6 +23,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/components/navbar/Navbar.jsx", ".next/types/app/about/page.tsx", "src/app/blog/[id]/page.ttsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/components/navbar/Navbar.jsx", ".next/types/app/about/page.tsx", "src/app/blog/[id]/page.ttsx", "src/app/portfolio/[category]/page.jsx", "src/components/footer/Footer.jsx", "src/components/(image)/socialIcon/SocialImage.jsx", "src/components/(image)/social/SocialImage.jsx"],
   "exclude": ["node_modules"]
 }
