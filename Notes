@@ -58,9 +58,9 @@
 - composant client, plusieurs manière:
     . methode fecth dans le useEffect
     . React Query
-    . SWR
+    . SWR (très recommandé par la doc next)
 - composant serveur il faudra les changer en composants asynchrone puis choisir entre 3 type de gestion des données afin de rendre l'app plus performante:
     . STATIC DATA FETCHING -> cache: 'force-cache' -> les données ne change jamais donc on met dans le cache les data
     . REVALIDATING DATA -> next: { revalidate: 10 } -> les données change mais pas trop souvent donc on les revalident toutes les 10sec
-    . next: 'no-store' -> les données change tous les temps, donc on récupère les nouvelles données à chaque demande
+    . DYNAMIC DATA FETCHING -> cache: 'no-store' -> les données change tous les temps, donc on récupère les nouvelles données à chaque demande
 - la force du choix de gestion des données pour les composants serveur réside sur le fait de garder en mémoire les data et de gérer la multiplication ou pas des appels API
